@@ -15,19 +15,9 @@ stl_directory = 'constant/triSurface/'
 # Path to the output T file
 output_file_path = '0/T'
 
-# Demand power for heating from Domus
-power_W = 3069.0
-
-# Area of Zone - get from Domus
-patch_area = 25.0
-
 # Normalize paths
 stl_directory = os.path.normpath(stl_directory)
 output_file_path = os.path.normpath(output_file_path)
-
-
-# Weather file temperature
-weather_file_temperature = simu.T
 
 # Function to calculate the area of a triangle
 def calculate_triangle_area(v0, v1, v2):
@@ -57,23 +47,13 @@ for stl_file in stl_files:
     base_name = os.path.splitext(stl_file)[0]  # Get the base name without extension
     
     if "Ar_Condicionado" in base_name:  # Check if this surface is in the list 
-        
-        if patch_area is None or patch_area == 0:
-            raise ValueError(f"Patch area for {base_name} is zero or invalid, check the STL file.")
-        
-        # Calculate heat flux (W/m²) - Under watch
-        heat_flux = max(round(float(power_W / patch_area), 2), 0.01)
-
-        # Debugging: Print the calculated heat flux and area
-        #print(f"Calculated area for {base_name}: {patch_area:.2f} m²")
-        #print(f"Calculated heat_flux for {base_name}: {heat_flux} W/m²")
-
+               
         # Add the formatted heat flux to the surfaces block
         surfaces_block += (
             f'  {base_name}\n'
             f'  {{\n'
             f'      type            fixedGradient;\n'
-            f'      gradient        uniform {heat_flux};\n'
+            f'      gradient        uniform {simu.rejectedHeat};\n'
             f'      value           uniform 300.0;\n'
             f'  }}\n\n'
         )      
@@ -82,7 +62,7 @@ for stl_file in stl_files:
             f'  {base_name}\n'
             f'  {{\n'
             f'      type            fixedValue;\n'
-            f'      value           uniform 292.15;\n'
+            f'      value           uniform {simu.Tw};\n'
             f'  }}\n\n'
         )
 
@@ -112,7 +92,7 @@ boundaryField
     inlet
     {{
         type            fixedValue;
-        value           uniform {weather_file_temperature};
+        value           uniform {simu.T};
     }}
 
     "(outlet|front|back|top)"
@@ -123,7 +103,7 @@ boundaryField
     floor
     {{
         type            fixedValue;
-        value           uniform 290.0;
+        value           uniform {simu.Tf};
     }}
 
 {surfaces_block}

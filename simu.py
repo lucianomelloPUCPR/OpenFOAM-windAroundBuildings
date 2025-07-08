@@ -14,11 +14,20 @@ eMeshLevel = 3
 # Velocity - from Domus
 velo = [3, 0, 0]
 
-# Temperature - from Domus
+# Weather Temperature
 T = 300
 
+# Wall temperature
+Tw = 292.15
+
+# Floor temperature
+Tf = 290.0
+
+# Demand power for heating from Domus - air conditionning system
+rejectedHeat = 122.0 # [W/m2]
+
 # Sensors - distance from the wall
-projectionDistance = 0.01
+projectionDistance = 0.01 #[m]
 
 # Simulation
 interval = 10

@@ -1,0 +1,115 @@
+
+/*--------------------------------*- C++ -*----------------------------------*
+  =========                 |
+  \      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \    /   O peration     | Website:  https://openfoam.org
+    \  /    A nd           | Version:  10
+     \/     M anipulation  |
+*---------------------------------------------------------------------------*/
+FoamFile
+{ 
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+} 
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+backgroundMesh
+{
+    xMin    -71.88;
+    xMax    80.16;
+    yMin    -65.86;
+    yMax    67.14;
+    zMin    1.0;
+    zMax    71.5;
+    xCells  30;
+    yCells  30;
+    zCells  30;
+}
+convertToMeters 1;
+vertices
+(
+    (-71.88 -65.86 1.0)
+    (80.16 -65.86 1.0)
+    (80.16 67.14 1.0)
+    (-71.88 67.14 1.0)
+    (-71.88 -65.86 71.5)
+    (80.16 -65.86 71.5)
+    (80.16 67.14 71.5)
+    (-71.88 67.14 71.5)
+);
+blocks
+(
+    hex (0 1 2 3 4 5 6 7)    
+    fluid (
+        $!backgroundMesh/xCells
+        $!backgroundMesh/yCells
+        $!backgroundMesh/zCells
+    )    
+    simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+defaultPatch
+{
+    type wall;
+}
+
+boundary
+(
+    top
+    {
+        type patch;
+        faces
+        (
+            (4 5 6 7)
+        );
+    }
+    floor
+    {
+        type wall;
+        faces
+        (
+            (0 3 2 1)
+        );
+    }
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (1 2 6 5)
+        );
+    }
+    front
+    {
+        type patch;
+        faces
+        (
+            (0 1 5 4)
+        );
+    }
+    back
+    {
+        type patch;
+        faces
+        (
+            (3 7 6 2)
+        );
+    }
+);
+
+mergePatchPairs
+(
+);
+// ************************************************************************* //

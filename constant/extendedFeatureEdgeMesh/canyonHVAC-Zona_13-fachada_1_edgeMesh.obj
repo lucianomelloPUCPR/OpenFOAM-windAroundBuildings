@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2025-07-08T07:42:47
+o canyonHVAC-Zona_13-fachada_1_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v 21.65854073 -7.35960722 1
+v 21.65854073 -2.359606981 13
+v 21.65854073 -7.35960722 13
+v 21.65854073 -2.359606981 1
+# </points>
+
+# <edges count="4">
+l 2 3
+l 3 1
+l 1 4
+l 4 2
+# </edges>

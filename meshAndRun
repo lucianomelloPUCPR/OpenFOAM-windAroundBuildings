@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# Source OpenFOAM v12 (Foundation)
+. /opt/openfoam12/etc/bashrc
+
+#set -e  # Stop script immediately if any command fails
+
+cd ${0%/*} || exit 1
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+foamCleanTutorials
+
+rm -rf 0/*
+
+echo " Step 1: Running Python preprocessors for blockMeshDict and snappyHexMeshDict..."
+python3 blockMesh.py
+python3 surfaceFeatures.py
+python3 snappyHexMesh.py
+
+echo " Step 2: Running blockMesh..."
+runApplication blockMesh
+
+echo " Step 3: Running surfaceFeatures..."
+runApplication surfaceFeatures
+
+echo " Step 4: Decomposing domain for snappyHexMesh..."
+runApplication decomposePar
+
+echo " Step 5: Running snappyHexMesh in parallel..."
+runParallel snappyHexMesh -overwrite
+
+echo " Step 6: Reconstructing mesh back to single domain..."
+runApplication reconstructPar
+
+echo " Step 7: Cleaning old processor directories to avoid conflicts..."
+rm log.reconstructPar
+rm -rf processor*
+
+echo " Step 8: Running Python scripts for patch fixing and BC setup..."
+
+python3 controlDict.py 
+
+python3 functions.py
+
+./bc
+
+echo " Step 9: Decomposing FINAL domain for solver run..."
+
+rm log.decomposePar
+
+runApplication decomposePar
+
+if [ ! -d "processor0" ]; then
+    echo "ERROR: Processor folders not found after decomposePar!"
+    exit 1
+fi
+
+echo " Step 10: Running solver in parallel..."
+runParallel $(getApplication)
+
+echo " Step 11: Reconstructing final results..."
+runApplication reconstructPar
+
+touch result.foam
+
+echo " All steps completed successfully. Simulation finished!"
+

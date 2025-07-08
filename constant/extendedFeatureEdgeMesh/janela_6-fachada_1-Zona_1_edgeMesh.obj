@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2025-06-27T13:38:22
+o janela_6-fachada_1-Zona_1_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v 5.480909824 -3.076760054 3.115309954
+v 5.480909824 -3.076760054 2.115309954
+v 5.480909824 -2.076760054 2.115309954
+v 5.480909824 -2.076760054 3.115309954
+# </points>
+
+# <edges count="4">
+l 1 2
+l 2 3
+l 3 4
+l 4 1
+# </edges>

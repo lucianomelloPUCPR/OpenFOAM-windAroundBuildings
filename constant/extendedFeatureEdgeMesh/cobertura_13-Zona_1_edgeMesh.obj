@@ -1,0 +1,27 @@
+# Wavefront OBJ file written 2025-07-04T10:12:21
+o cobertura_13-Zona_1_edgeMesh
+
+# points : 8
+# lines  : 8
+
+# <points count="8">
+v 17.5333004 -25 1
+v 25 -25 1
+v 17.49489975 25 1
+v 25 25 1
+v 17.49489975 8.004320145 1
+v 17.49489975 3.004319906 1
+v 17.5333004 -2.995680094 1
+v 17.5333004 -7.995679855 1
+# </points>
+
+# <edges count="8">
+l 5 6
+l 6 7
+l 8 1
+l 1 2
+l 3 5
+l 7 8
+l 2 4
+l 4 3
+# </edges>

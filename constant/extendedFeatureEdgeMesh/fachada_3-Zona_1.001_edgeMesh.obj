@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2024-10-11T08:14:38
+o fachada_3-Zona_1.001_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v -2.08387 -2.5592 2.32419
+v -2.08387 -4.54649 2.32419
+v -2.08387 -4.54649 3.25423
+v -2.08387 -2.5592 3.25423
+# </points>
+
+# <edges count="4">
+l 1 2
+l 2 3
+l 3 4
+l 4 1
+# </edges>

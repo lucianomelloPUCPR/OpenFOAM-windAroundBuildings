@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2024-09-23T06:54:55
+o piso__solo__1-Zona_1_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v -0.5 -0.5 0
+v -0.5 0.5 0
+v 0.5 0.5 0
+v 0.5 -0.5 0
+# </points>
+
+# <edges count="4">
+l 1 2
+l 2 3
+l 3 4
+l 4 1
+# </edges>

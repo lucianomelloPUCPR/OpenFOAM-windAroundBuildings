@@ -1,0 +1,62 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \    /   O peration     | Website:  https://openfoam.org
+    \  /    A nd           | Version:  10
+     \/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      surfaceFeaturesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surfaces (
+				"canyonHVAC-Zona_4-Ar_Condicionado_6.stl" 
+				"canyonHVAC-Zona_9-cobertura_4.stl" 
+				"canyonHVAC-Zona_13-cobertura_7.stl" 
+				"canyonHVAC-Zona_5-cobertura_4.stl" 
+				"canyonHVAC-Zona_13-fachada_1.stl" 
+				"canyonHVAC-Zona_2-Ar_Condicionado_6.stl" 
+				"canyonHVAC-Zona_12-fachada_2.stl" 
+				"canyonHVAC-Zona_10-cobertura_7.stl" 
+				"canyonHVAC-Zona_11-fachada_0.stl" 
+				"canyonHVAC-Zona_13-fachada_0.stl" 
+				"canyonHVAC-Zona_8-fachada_3.stl" 
+				"canyonHVAC-Zona_9-fachada_1.stl" 
+				"canyonHVAC-Zona_6-fachada_1.stl" 
+				"canyonHVAC-Zona_3-Ar_Condicionado_6.stl" 
+				"canyonHVAC-Zona_5-fachada_0.stl" 
+				"canyonHVAC-Zona_9-Ar_Condicionado_6.stl" 
+				"canyonHVAC-Zona_2-fachada_0.stl" 
+				"canyonHVAC-Zona_3-fachada_2.stl" 
+				"canyonHVAC-Zona_10-fachada_5.stl" 
+				"canyonHVAC-Zona_11-fachada_6.stl" 
+				"canyonHVAC-Zona_3-fachada_0.stl" 
+				"canyonHVAC-Zona_9-fachada_3.stl" 
+				"canyonHVAC-Zona_11-cobertura_7.stl" 
+				"canyonHVAC-Zona_6-Ar_Condicionado_6.stl" 
+				"canyonHVAC-Zona_6-fachada_3.stl" 
+				"canyonHVAC-Zona_10-fachada_0.stl" 
+				"canyonHVAC-Zona_8-Ar_Condicionado_6.stl" 
+				"canyonHVAC-Zona_5-Ar_Condicionado_6.stl" 
+				"canyonHVAC-Zona_8-fachada_1.stl" 
+				"canyonHVAC-Zona_7-Ar_Condicionado_6.stl" 
+				"canyonHVAC-Zona_13-fachada_2.stl" 
+				"canyonHVAC-Zona_12-fachada_0.stl" 
+				"canyonHVAC-Zona_7-fachada_3.stl" 
+				"canyonHVAC-Zona_4-fachada_2.stl" 
+				"canyonHVAC-Zona_10-fachada_6.stl" 
+				"canyonHVAC-Zona_7-fachada_1.stl" 
+				"canyonHVAC-Zona_12-fachada_1.stl" 
+				"canyonHVAC-Zona_4-fachada_0.stl" 
+				"canyonHVAC-Zona_12-cobertura_7.stl" 
+				"canyonHVAC-Zona_2-fachada_2.stl" 
+				"canyonHVAC-Zona_11-fachada_5.stl" 
+				"canyonHVAC-Zona_5-fachada_2.stl");
+
+#includeEtc "caseDicts/surface/surfaceFeaturesDict.cfg"
+
+// ************************************************************************* //

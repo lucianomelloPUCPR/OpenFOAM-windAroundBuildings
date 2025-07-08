@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2024-09-19T16:58:54
+o cobertura_1-Zona_5_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v -0.199073 -4.08149 0.849939
+v 3.48006 -4.08149 0.849939
+v 3.48006 -7.65639 0.849939
+v -0.199073 -7.65639 0.849939
+# </points>
+
+# <edges count="4">
+l 1 2
+l 2 3
+l 3 4
+l 4 1
+# </edges>

@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2024-10-18T13:46:08
+o porta_7-fachada_1-Zona_1_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v 5.4377 -3.58251 2.92387
+v 5.4377 -3.58251 0.823868
+v 5.4377 -2.58251 0.823868
+v 5.4377 -2.58251 2.92387
+# </points>
+
+# <edges count="4">
+l 1 2
+l 2 3
+l 3 4
+l 4 1
+# </edges>

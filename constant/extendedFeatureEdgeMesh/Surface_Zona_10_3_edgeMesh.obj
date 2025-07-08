@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2024-10-18T14:02:06
+o Surface_Zona_10_3_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v -2.50515 8.00432 7
+v -2.50515 3.00432 7
+v -2.50515 3.00432 4
+v -2.50515 8.00432 4
+# </points>
+
+# <edges count="4">
+l 1 2
+l 2 3
+l 3 4
+l 4 1
+# </edges>

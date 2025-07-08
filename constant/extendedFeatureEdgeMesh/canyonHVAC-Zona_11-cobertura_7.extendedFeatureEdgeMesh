@@ -1,0 +1,79 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       extendedFeatureEdgeMesh;
+    location    "constant/extendedFeatureEdgeMesh";
+    object      canyonHVAC-Zona_11-cobertura_7.extendedFeatureEdgeMesh;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// points
+4((1.620090008 -7.35960722 13) (-13.33876038 -2.359606981 13) (-13.33876038 -7.35960722 13) (1.620090008 -2.359606981 13))
+// edges
+4((1 2) (2 0) (0 3) (3 1))
+// concaveStart mixedStart nonFeatureStart
+0 0 4
+// internalStart flatStart openStart multipleStart
+0 0 0 4
+// normals
+2{(0 0 1)}
+// normal volume types
+
+2
+(
+0
+0
+)
+
+// normalDirections
+
+4
+(
+1(1)
+1(1)
+1(1)
+1(1)
+)
+
+// edgeNormals
+
+4
+(
+1(0)
+1(0)
+1(1)
+1(1)
+)
+
+// featurePointNormals
+
+4
+(
+1(0)
+1(0)
+1(0)
+1(1)
+)
+
+// featurePointEdges
+
+4
+(
+2(1 2)
+2(0 3)
+2(0 1)
+2(2 3)
+)
+
+// regionEdges
+4(0 1 2 3)
+
+
+// ************************************************************************* //

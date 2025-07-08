@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2024-09-23T10:00:48
+o Parede_6-Zona_1_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v -2.14953 1.3931 1.61549
+v -2.14953 1.3931 0.982827
+v -2.14953 2.98454 0.982827
+v -2.14953 2.98454 1.61549
+# </points>
+
+# <edges count="4">
+l 1 2
+l 2 3
+l 3 4
+l 4 1
+# </edges>

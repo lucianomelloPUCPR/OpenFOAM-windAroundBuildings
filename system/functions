@@ -1,0 +1,818 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \    /   O peration     | Website: https://openfoam.org
+    \  /    A nd           | Version: 12
+     \/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      functions;
+}
+
+#includeFunc residuals
+
+ yPlus
+    {
+        type            yPlus;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        outputControl   timeStep; // or writeTime or timeStep as needed
+        outputInterval  10;
+    }
+
+    sample_near_canyonHVAC-Zona_4-Ar_Condicionado_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (4.288465 3.440393 9.093897)
+            (3.955132 3.540393 9.093897)
+            (4.631799 3.440393 9.303897)
+            (4.631799 3.540393 9.203897)
+            (3.955132 3.440393 9.413898)
+            (4.288465 3.540393 9.413898)
+            (3.611799 3.440393 9.203897)
+            (3.611799 3.540393 9.303897)
+            (4.288465 3.330393 9.203897)
+            (3.955132 3.330393 9.303897)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_9-cobertura_4
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 -5.692940 13.010000)
+            (4.953423 -4.026274 13.010000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_13-cobertura_7
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (11.632907 -5.692940 13.010000)
+            (16.645723 -4.026274 13.010000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_5-cobertura_4
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 5.307060 13.010000)
+            (4.953423 6.973727 13.010000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_13-fachada_1
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (21.668541 -5.692940 9.000000)
+            (21.668541 -4.026274 5.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_2-Ar_Condicionado_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (4.282577 3.440393 3.089722)
+            (3.949244 3.540393 3.089722)
+            (4.625910 3.440393 3.299722)
+            (4.625910 3.540393 3.199722)
+            (3.949244 3.440393 3.409722)
+            (4.282577 3.540393 3.409722)
+            (3.605910 3.440393 3.199722)
+            (3.605910 3.540393 3.299722)
+            (4.282577 3.330393 3.199722)
+            (3.949244 3.330393 3.299722)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_12-fachada_2
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (11.620107 8.650393 12.000000)
+            (11.620107 8.650393 10.000000)
+            (11.620107 8.650393 4.000000)
+            (11.620107 8.650393 2.000000)
+            (16.620123 8.650393 7.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_10-cobertura_7
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (-8.379876 5.307060 13.010000)
+            (-3.379893 6.973727 13.010000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_11-fachada_0
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (-3.366193 -7.369607 2.000000)
+            (-3.366194 -7.369607 4.000000)
+            (-3.366194 -7.369607 10.000000)
+            (-8.352477 -7.369607 7.000000)
+            (-3.366193 -7.369607 12.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_13-fachada_0
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (11.632907 -7.369607 2.000000)
+            (11.632907 -7.369607 4.000000)
+            (11.632907 -7.369607 10.000000)
+            (11.632907 -7.369607 12.000000)
+            (16.645723 -7.369607 7.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_8-fachada_3
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 -2.349607 9.000000)
+            (4.953423 -2.349607 8.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_9-fachada_1
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 -7.369607 11.000000)
+            (4.953423 -7.369607 12.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_6-fachada_1
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 -7.369607 2.000000)
+            (4.953423 -7.369607 3.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_3-Ar_Condicionado_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (4.287971 3.440393 6.086653)
+            (3.954638 3.540393 6.086653)
+            (4.631305 3.440393 6.296653)
+            (4.631305 3.540393 6.196653)
+            (3.954638 3.440393 6.406654)
+            (4.287971 3.540393 6.406654)
+            (3.611305 3.440393 6.196653)
+            (3.611305 3.540393 6.296653)
+            (4.287971 3.330393 6.196653)
+            (3.954638 3.330393 6.296653)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_5-fachada_0
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 8.650393 12.000000)
+            (4.953423 8.650393 11.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_9-Ar_Condicionado_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.949137 -2.159607 12.100677)
+            (4.282471 -2.259607 12.100677)
+            (3.605804 -2.159607 12.310677)
+            (3.605804 -2.259607 12.210677)
+            (4.282471 -2.159607 12.420678)
+            (3.949137 -2.259607 12.420678)
+            (4.625804 -2.159607 12.210677)
+            (4.625804 -2.259607 12.310677)
+            (3.949137 -2.049607 12.210677)
+            (4.282471 -2.049607 12.310677)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_2-fachada_0
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 8.650393 3.000000)
+            (4.953423 8.650393 2.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_3-fachada_2
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 3.630393 5.000000)
+            (4.953423 3.630393 6.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_10-fachada_5
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (-3.379893 8.650393 12.000000)
+            (-1.713227 8.650393 6.000000)
+            (-6.713210 8.650393 8.000000)
+            (-3.379893 8.650393 3.000000)
+            (-0.046577 8.650393 2.000000)
+            (-0.046577 8.650393 4.000000)
+            (-11.713193 8.650393 5.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_11-fachada_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (-13.348761 -5.692940 5.000000)
+            (-13.348761 -4.026274 9.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_3-fachada_0
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 8.650393 6.000000)
+            (4.953423 8.650393 5.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_9-fachada_3
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 -2.349607 12.000000)
+            (4.953423 -2.349607 11.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_11-cobertura_7
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (-8.352477 -5.692940 13.010000)
+            (-3.366193 -4.026274 13.010000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_6-Ar_Condicionado_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.950146 -2.159607 3.086188)
+            (4.283480 -2.259607 3.086188)
+            (3.606813 -2.159607 3.296188)
+            (3.606813 -2.259607 3.196188)
+            (4.283480 -2.159607 3.406188)
+            (3.950146 -2.259607 3.406188)
+            (4.626813 -2.159607 3.196188)
+            (4.626813 -2.259607 3.296188)
+            (3.950146 -2.049607 3.196188)
+            (4.283480 -2.049607 3.296188)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_6-fachada_3
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 -2.349607 3.000000)
+            (4.953423 -2.349607 2.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_10-fachada_0
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (-3.379893 3.630393 2.000000)
+            (-3.379893 3.630393 4.000000)
+            (-3.379893 3.630393 10.000000)
+            (-8.379876 3.630393 7.000000)
+            (-3.379893 3.630393 12.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_8-Ar_Condicionado_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.957520 -2.159607 9.088034)
+            (4.290853 -2.259607 9.088034)
+            (3.614186 -2.159607 9.298034)
+            (3.614186 -2.259607 9.198033)
+            (4.290853 -2.159607 9.408034)
+            (3.957520 -2.259607 9.408034)
+            (4.634186 -2.159607 9.198033)
+            (4.634186 -2.259607 9.298034)
+            (3.957520 -2.049607 9.198033)
+            (4.290853 -2.049607 9.298034)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_5-Ar_Condicionado_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (4.290160 3.440393 12.090497)
+            (3.956826 3.540393 12.090497)
+            (4.633493 3.440393 12.300496)
+            (4.633493 3.540393 12.200496)
+            (3.956826 3.440393 12.410495)
+            (4.290160 3.540393 12.410495)
+            (3.613493 3.440393 12.200496)
+            (3.613493 3.540393 12.300496)
+            (4.290160 3.330393 12.200496)
+            (3.956826 3.330393 12.300496)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_8-fachada_1
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 -7.369607 8.000000)
+            (4.953423 -7.369607 9.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_7-Ar_Condicionado_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.950066 -2.159607 6.093960)
+            (4.283400 -2.259607 6.093960)
+            (3.606733 -2.159607 6.303961)
+            (3.606733 -2.259607 6.203961)
+            (4.283400 -2.159607 6.413961)
+            (3.950066 -2.259607 6.413961)
+            (4.626733 -2.159607 6.203961)
+            (4.626733 -2.259607 6.303961)
+            (3.950066 -2.049607 6.203961)
+            (4.283400 -2.049607 6.303961)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_13-fachada_2
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (11.632907 -2.349607 12.000000)
+            (11.632907 -2.349607 10.000000)
+            (11.632907 -2.349607 4.000000)
+            (11.632907 -2.349607 2.000000)
+            (16.645723 -2.349607 7.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_12-fachada_0
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (11.620107 3.630393 2.000000)
+            (11.620107 3.630393 4.000000)
+            (11.620107 3.630393 10.000000)
+            (11.620107 3.630393 12.000000)
+            (16.620123 3.630393 7.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_7-fachada_3
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 -2.349607 6.000000)
+            (4.953423 -2.349607 5.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_4-fachada_2
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 3.630393 8.000000)
+            (4.953423 3.630393 9.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_10-fachada_6
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (-13.389860 5.307060 5.000000)
+            (-13.389860 6.973727 9.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_7-fachada_1
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 -7.369607 5.000000)
+            (4.953423 -7.369607 6.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_12-fachada_1
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (21.630140 5.307060 9.000000)
+            (21.630140 6.973727 5.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_4-fachada_0
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 8.650393 9.000000)
+            (4.953423 8.650393 8.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_12-cobertura_7
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (11.620107 5.307060 13.010000)
+            (16.620123 6.973727 13.010000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_2-fachada_2
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 3.630393 2.000000)
+            (4.953423 3.630393 3.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_11-fachada_5
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (-3.366193 -2.349607 12.000000)
+            (-3.366194 -2.349607 10.000000)
+            (-3.366194 -2.349607 4.000000)
+            (-8.352477 -2.349607 7.000000)
+            (-3.366193 -2.349607 2.000000)
+        );
+    }
+
+    sample_near_canyonHVAC-Zona_5-fachada_2
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        writeControl    timeStep;
+        writeInterval   10;
+        fields ( U T p );
+        probeLocations
+        (
+            (3.286757 3.630393 11.000000)
+            (4.953423 3.630393 12.000000)
+        );
+    }
+
+    htc_surfaces
+    {
+        type        wallHeatTransferCoeff;
+        libs        ("libfieldFunctionObjects.so");
+        enabled     true;
+        model       kappaEff;
+        patches     (
+						"canyonHVAC-Zona_4-Ar_Condicionado_6"
+						"canyonHVAC-Zona_9-cobertura_4"
+						"canyonHVAC-Zona_13-cobertura_7"
+						"canyonHVAC-Zona_5-cobertura_4"
+						"canyonHVAC-Zona_13-fachada_1"
+						"canyonHVAC-Zona_2-Ar_Condicionado_6"
+						"canyonHVAC-Zona_12-fachada_2"
+						"canyonHVAC-Zona_10-cobertura_7"
+						"canyonHVAC-Zona_11-fachada_0"
+						"canyonHVAC-Zona_13-fachada_0"
+						"canyonHVAC-Zona_8-fachada_3"
+						"canyonHVAC-Zona_9-fachada_1"
+						"canyonHVAC-Zona_6-fachada_1"
+						"canyonHVAC-Zona_3-Ar_Condicionado_6"
+						"canyonHVAC-Zona_5-fachada_0"
+						"canyonHVAC-Zona_9-Ar_Condicionado_6"
+						"canyonHVAC-Zona_2-fachada_0"
+						"canyonHVAC-Zona_3-fachada_2"
+						"canyonHVAC-Zona_10-fachada_5"
+						"canyonHVAC-Zona_11-fachada_6"
+						"canyonHVAC-Zona_3-fachada_0"
+						"canyonHVAC-Zona_9-fachada_3"
+						"canyonHVAC-Zona_11-cobertura_7"
+						"canyonHVAC-Zona_6-Ar_Condicionado_6"
+						"canyonHVAC-Zona_6-fachada_3"
+						"canyonHVAC-Zona_10-fachada_0"
+						"canyonHVAC-Zona_8-Ar_Condicionado_6"
+						"canyonHVAC-Zona_5-Ar_Condicionado_6"
+						"canyonHVAC-Zona_8-fachada_1"
+						"canyonHVAC-Zona_7-Ar_Condicionado_6"
+						"canyonHVAC-Zona_13-fachada_2"
+						"canyonHVAC-Zona_12-fachada_0"
+						"canyonHVAC-Zona_7-fachada_3"
+						"canyonHVAC-Zona_4-fachada_2"
+						"canyonHVAC-Zona_10-fachada_6"
+						"canyonHVAC-Zona_7-fachada_1"
+						"canyonHVAC-Zona_12-fachada_1"
+						"canyonHVAC-Zona_4-fachada_0"
+						"canyonHVAC-Zona_12-cobertura_7"
+						"canyonHVAC-Zona_2-fachada_2"
+						"canyonHVAC-Zona_11-fachada_5"
+						"canyonHVAC-Zona_5-fachada_2"
+        );
+        rho         1.225;
+        Cp          1005;
+        Pr          0.707;
+        Prt         0.9;
+        writeControl timeStep;
+        writeInterval   10;
+    }
+
+    pressure_coeff
+    {
+        type            pressure;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        log             yes;
+        writeControl    timeStep;
+        writeInterval   10;
+        enabled         yes;
+        calcTotal       no;
+        calcCoeff       yes;
+        pRef            0;
+        rhoInf          1.125;
+        pInf            0;
+        UInf            (3 0 0);
+    }
+

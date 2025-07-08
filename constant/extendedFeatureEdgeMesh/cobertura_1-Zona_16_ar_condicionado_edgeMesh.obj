@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2025-07-04T10:12:21
+o cobertura_1-Zona_16_ar_condicionado_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v 0.5020359755 3.004319906 9.399089813
+v -0.4979639947 3.004319906 9.399089813
+v -0.4979639947 2.704319954 9.399089813
+v 0.5020359755 2.704319954 9.399089813
+# </points>
+
+# <edges count="4">
+l 1 2
+l 2 3
+l 3 4
+l 4 1
+# </edges>

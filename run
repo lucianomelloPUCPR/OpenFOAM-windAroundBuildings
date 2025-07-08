@@ -1,0 +1,17 @@
+#!/bin/bash
+
+. /opt/openfoam12/etc/bashrc
+cd ${0%/*} || exit 1
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+./bc # Is it worth? Could be from Domus to 0 folder
+
+rm -f log.*
+
+foamListTimes -rm
+
+python3 controlDict.py 
+runApplication decomposePar
+runParallel $(getApplication)
+runApplication reconstructPar
+#runApplication paraFoam -touchAll

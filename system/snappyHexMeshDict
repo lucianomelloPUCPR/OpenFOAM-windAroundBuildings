@@ -1,0 +1,536 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \    /   O peration     | Website:  https://openfoam.org
+    \  /    A nd           | Version:  12
+     \/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#includeEtc "caseDicts/mesh/generation/snappyHexMeshDict.cfg"
+
+castellatedMesh on;
+snap            on;
+addLayers       off;
+
+geometry
+{
+    canyonHVAC-Zona_4-Ar_Condicionado_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_4-Ar_Condicionado_6.stl";
+    }
+    canyonHVAC-Zona_9-cobertura_4
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_9-cobertura_4.stl";
+    }
+    canyonHVAC-Zona_13-cobertura_7
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_13-cobertura_7.stl";
+    }
+    canyonHVAC-Zona_5-cobertura_4
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_5-cobertura_4.stl";
+    }
+    canyonHVAC-Zona_13-fachada_1
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_13-fachada_1.stl";
+    }
+    canyonHVAC-Zona_2-Ar_Condicionado_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_2-Ar_Condicionado_6.stl";
+    }
+    canyonHVAC-Zona_12-fachada_2
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_12-fachada_2.stl";
+    }
+    canyonHVAC-Zona_10-cobertura_7
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_10-cobertura_7.stl";
+    }
+    canyonHVAC-Zona_11-fachada_0
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_11-fachada_0.stl";
+    }
+    canyonHVAC-Zona_13-fachada_0
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_13-fachada_0.stl";
+    }
+    canyonHVAC-Zona_8-fachada_3
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_8-fachada_3.stl";
+    }
+    canyonHVAC-Zona_9-fachada_1
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_9-fachada_1.stl";
+    }
+    canyonHVAC-Zona_6-fachada_1
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_6-fachada_1.stl";
+    }
+    canyonHVAC-Zona_3-Ar_Condicionado_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_3-Ar_Condicionado_6.stl";
+    }
+    canyonHVAC-Zona_5-fachada_0
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_5-fachada_0.stl";
+    }
+    canyonHVAC-Zona_9-Ar_Condicionado_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_9-Ar_Condicionado_6.stl";
+    }
+    canyonHVAC-Zona_2-fachada_0
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_2-fachada_0.stl";
+    }
+    canyonHVAC-Zona_3-fachada_2
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_3-fachada_2.stl";
+    }
+    canyonHVAC-Zona_10-fachada_5
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_10-fachada_5.stl";
+    }
+    canyonHVAC-Zona_11-fachada_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_11-fachada_6.stl";
+    }
+    canyonHVAC-Zona_3-fachada_0
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_3-fachada_0.stl";
+    }
+    canyonHVAC-Zona_9-fachada_3
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_9-fachada_3.stl";
+    }
+    canyonHVAC-Zona_11-cobertura_7
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_11-cobertura_7.stl";
+    }
+    canyonHVAC-Zona_6-Ar_Condicionado_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_6-Ar_Condicionado_6.stl";
+    }
+    canyonHVAC-Zona_6-fachada_3
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_6-fachada_3.stl";
+    }
+    canyonHVAC-Zona_10-fachada_0
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_10-fachada_0.stl";
+    }
+    canyonHVAC-Zona_8-Ar_Condicionado_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_8-Ar_Condicionado_6.stl";
+    }
+    canyonHVAC-Zona_5-Ar_Condicionado_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_5-Ar_Condicionado_6.stl";
+    }
+    canyonHVAC-Zona_8-fachada_1
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_8-fachada_1.stl";
+    }
+    canyonHVAC-Zona_7-Ar_Condicionado_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_7-Ar_Condicionado_6.stl";
+    }
+    canyonHVAC-Zona_13-fachada_2
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_13-fachada_2.stl";
+    }
+    canyonHVAC-Zona_12-fachada_0
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_12-fachada_0.stl";
+    }
+    canyonHVAC-Zona_7-fachada_3
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_7-fachada_3.stl";
+    }
+    canyonHVAC-Zona_4-fachada_2
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_4-fachada_2.stl";
+    }
+    canyonHVAC-Zona_10-fachada_6
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_10-fachada_6.stl";
+    }
+    canyonHVAC-Zona_7-fachada_1
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_7-fachada_1.stl";
+    }
+    canyonHVAC-Zona_12-fachada_1
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_12-fachada_1.stl";
+    }
+    canyonHVAC-Zona_4-fachada_0
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_4-fachada_0.stl";
+    }
+    canyonHVAC-Zona_12-cobertura_7
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_12-cobertura_7.stl";
+    }
+    canyonHVAC-Zona_2-fachada_2
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_2-fachada_2.stl";
+    }
+    canyonHVAC-Zona_11-fachada_5
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_11-fachada_5.stl";
+    }
+    canyonHVAC-Zona_5-fachada_2
+    {
+        type triSurfaceMesh;
+        file "canyonHVAC-Zona_5-fachada_2.stl";
+    }
+
+
+      refinementBox
+      {
+          type searchableBox;
+          min (-16.06 -8.83 1.0);
+          max (25.99 10.37 15.6);
+
+      }
+
+};
+
+
+castellatedMeshControls
+{
+    nCellsBetweenLevels 3;
+
+    features
+    (
+      { file  "canyonHVAC-Zona_4-Ar_Condicionado_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_9-cobertura_4.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_13-cobertura_7.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_5-cobertura_4.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_13-fachada_1.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_2-Ar_Condicionado_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_12-fachada_2.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_10-cobertura_7.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_11-fachada_0.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_13-fachada_0.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_8-fachada_3.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_9-fachada_1.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_6-fachada_1.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_3-Ar_Condicionado_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_5-fachada_0.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_9-Ar_Condicionado_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_2-fachada_0.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_3-fachada_2.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_10-fachada_5.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_11-fachada_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_3-fachada_0.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_9-fachada_3.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_11-cobertura_7.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_6-Ar_Condicionado_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_6-fachada_3.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_10-fachada_0.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_8-Ar_Condicionado_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_5-Ar_Condicionado_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_8-fachada_1.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_7-Ar_Condicionado_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_13-fachada_2.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_12-fachada_0.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_7-fachada_3.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_4-fachada_2.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_10-fachada_6.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_7-fachada_1.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_12-fachada_1.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_4-fachada_0.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_12-cobertura_7.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_2-fachada_2.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_11-fachada_5.eMesh"; level 3; }
+      { file  "canyonHVAC-Zona_5-fachada_2.eMesh"; level 3; }
+
+    );
+
+    refinementSurfaces
+    {
+
+        "(canyonHVAC-Zona_4-Ar_Condicionado_6|canyonHVAC-Zona_9-cobertura_4|canyonHVAC-Zona_13-cobertura_7|canyonHVAC-Zona_5-cobertura_4|canyonHVAC-Zona_13-fachada_1|canyonHVAC-Zona_2-Ar_Condicionado_6|canyonHVAC-Zona_12-fachada_2|canyonHVAC-Zona_10-cobertura_7|canyonHVAC-Zona_11-fachada_0|canyonHVAC-Zona_13-fachada_0|canyonHVAC-Zona_8-fachada_3|canyonHVAC-Zona_9-fachada_1|canyonHVAC-Zona_6-fachada_1|canyonHVAC-Zona_3-Ar_Condicionado_6|canyonHVAC-Zona_5-fachada_0|canyonHVAC-Zona_9-Ar_Condicionado_6|canyonHVAC-Zona_2-fachada_0|canyonHVAC-Zona_3-fachada_2|canyonHVAC-Zona_10-fachada_5|canyonHVAC-Zona_11-fachada_6|canyonHVAC-Zona_3-fachada_0|canyonHVAC-Zona_9-fachada_3|canyonHVAC-Zona_11-cobertura_7|canyonHVAC-Zona_6-Ar_Condicionado_6|canyonHVAC-Zona_6-fachada_3|canyonHVAC-Zona_10-fachada_0|canyonHVAC-Zona_8-Ar_Condicionado_6|canyonHVAC-Zona_5-Ar_Condicionado_6|canyonHVAC-Zona_8-fachada_1|canyonHVAC-Zona_7-Ar_Condicionado_6|canyonHVAC-Zona_13-fachada_2|canyonHVAC-Zona_12-fachada_0|canyonHVAC-Zona_7-fachada_3|canyonHVAC-Zona_4-fachada_2|canyonHVAC-Zona_10-fachada_6|canyonHVAC-Zona_7-fachada_1|canyonHVAC-Zona_12-fachada_1|canyonHVAC-Zona_4-fachada_0|canyonHVAC-Zona_12-cobertura_7|canyonHVAC-Zona_2-fachada_2|canyonHVAC-Zona_11-fachada_5|canyonHVAC-Zona_5-fachada_2)"
+        {
+            level (2 2) ;
+            patchInfo { type wall; }
+        }
+
+    }
+
+    refinementRegions
+    {
+         refinementBox
+        {
+            mode    inside;
+            level   2;
+        }
+    }
+
+    insidePoint (-71.87 -65.85 1.01);  // Automatically calculated inside the domain
+    allowFreeStandingZoneFaces true;
+}
+
+snapControls
+{
+    nSmoothPatch 3;
+    tolerance 2.0;
+    nSolverIter 300;
+    nRelaxIter 5;
+    explicitFeatureSnap    true;
+    implicitFeatureSnap    false;
+}
+
+addLayersControls
+{
+    layers
+    {
+    canyonHVAC-Zona_4-Ar_Condicionado_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_9-cobertura_4
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_13-cobertura_7
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_5-cobertura_4
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_13-fachada_1
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_2-Ar_Condicionado_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_12-fachada_2
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_10-cobertura_7
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_11-fachada_0
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_13-fachada_0
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_8-fachada_3
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_9-fachada_1
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_6-fachada_1
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_3-Ar_Condicionado_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_5-fachada_0
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_9-Ar_Condicionado_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_2-fachada_0
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_3-fachada_2
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_10-fachada_5
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_11-fachada_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_3-fachada_0
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_9-fachada_3
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_11-cobertura_7
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_6-Ar_Condicionado_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_6-fachada_3
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_10-fachada_0
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_8-Ar_Condicionado_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_5-Ar_Condicionado_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_8-fachada_1
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_7-Ar_Condicionado_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_13-fachada_2
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_12-fachada_0
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_7-fachada_3
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_4-fachada_2
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_10-fachada_6
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_7-fachada_1
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_12-fachada_1
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_4-fachada_0
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_12-cobertura_7
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_2-fachada_2
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_11-fachada_5
+    {
+        nSurfaceLayers 6;
+    }
+    canyonHVAC-Zona_5-fachada_2
+    {
+        nSurfaceLayers 6;
+    }
+
+    }        
+    
+
+    relativeSizes       true;
+    expansionRatio      1.2;
+    finalLayerThickness 0.5;
+    minThickness        1e-3;
+}
+
+meshQualityControls
+{
+    #include "meshQualityDict"
+
+    relaxed
+    {
+        maxnonOrtho 75;
+    }
+
+    nSmoothScale 75;
+    errorReduction 0.75;
+}
+
+writeFlags
+(
+    // scalarLevels
+    // layerSets
+    // layerFields
+);
+
+mergeTolerance 1e-6;
+
+// ************************************************************************* //

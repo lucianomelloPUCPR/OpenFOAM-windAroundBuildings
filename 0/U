@@ -1,0 +1,282 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \    /   O peration     | Website:  https://openfoam.org
+    \  /    A nd           | Version: 12
+     \/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    inlet
+    {
+        type            codedFixedValue;
+        value           uniform (0 0 0);
+        name            inletProfile; // Default value (for outlet behavior)
+        
+        code
+        #{
+            Info << "Applying inlet velocity profile codedFixedValue" << endl;
+
+            const fvPatch& boundaryPatch = patch();
+            const vectorField& Cf = boundaryPatch.Cf();
+            vectorField& field = *this;
+
+            vector Uvec(3, 0, 0);
+            
+            scalar Umax = mag(Uvec);
+            scalar zmax = 200.0;
+            scalar alpha = 0.2;
+
+            forAll(Cf, faceI)
+            {
+                scalar z = Cf[faceI].z();
+                if (z > SMALL)
+                {
+                    scalar U = Umax * pow(z / zmax, alpha);
+                    field[faceI] = Umax > SMALL ? U * (Uvec / Umax) : vector::zero;
+                }
+                else
+                {
+                    field[faceI] = vector::zero;
+                }
+            }
+        #};
+      }
+
+    "(outlet|front|back|top)"
+    {
+        type            zeroGradient;
+    }
+
+    floor
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_4-Ar_Condicionado_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_9-cobertura_4
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_13-cobertura_7
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_5-cobertura_4
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_13-fachada_1
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_2-Ar_Condicionado_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_12-fachada_2
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_10-cobertura_7
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_11-fachada_0
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_13-fachada_0
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_8-fachada_3
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_9-fachada_1
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_6-fachada_1
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_3-Ar_Condicionado_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_5-fachada_0
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_9-Ar_Condicionado_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_2-fachada_0
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_3-fachada_2
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_10-fachada_5
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_11-fachada_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_3-fachada_0
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_9-fachada_3
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_11-cobertura_7
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_6-Ar_Condicionado_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_6-fachada_3
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_10-fachada_0
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_8-Ar_Condicionado_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_5-Ar_Condicionado_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_8-fachada_1
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_7-Ar_Condicionado_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_13-fachada_2
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_12-fachada_0
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_7-fachada_3
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_4-fachada_2
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_10-fachada_6
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_7-fachada_1
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_12-fachada_1
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_4-fachada_0
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_12-cobertura_7
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_2-fachada_2
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_11-fachada_5
+    {
+        type            noSlip;
+    }
+
+    canyonHVAC-Zona_5-fachada_2
+    {
+        type            noSlip;
+    }
+
+
+    #includeEtc "caseDicts/setConstraintTypes"
+}
+
+// ************************************************************************* //

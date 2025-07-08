@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2024-08-19T17:35:05
+o IDF_Geometry_49_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v -8.90194 3.14105 0
+v -8.90194 -7.47543 0
+v -8.90194 -7.47543 8.91738
+v -8.90194 3.14105 8.91738
+# </points>
+
+# <edges count="4">
+l 1 2
+l 2 3
+l 3 4
+l 4 1
+# </edges>

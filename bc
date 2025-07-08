@@ -1,0 +1,17 @@
+#!/bin/bash
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source OpenFOAM run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+
+# === Run Python scripts to generate boundary condition files ===
+echo "Running Python scripts to update boundary conditions..."
+python3 -u U.py
+python3 -u T.py
+python3 -u k.py
+python3 -u p.py
+python3 -u omega.py
+python3 -u nut.py
+python3 -u alphat.py
+

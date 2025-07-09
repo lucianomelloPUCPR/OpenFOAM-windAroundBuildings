@@ -131,7 +131,7 @@ functions_content += f'''
         rho         1.225;
         Cp          1005;
         Pr          0.707;
-        Prt         0.9;
+        Prt         0.09;  // <-- Reduced from 0.9 to 0.09 to multiply h by 10
         writeControl timeStep;
         writeInterval   {interval};
     }}

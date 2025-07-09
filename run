@@ -9,9 +9,6 @@ cd ${0%/*} || exit 1
 rm -f log.*
 
 foamListTimes -rm
-
-python3 controlDict.py 
 runApplication decomposePar
 runParallel $(getApplication)
 runApplication reconstructPar
-#runApplication paraFoam -touchAll

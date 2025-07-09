@@ -23,7 +23,8 @@ Tw = 292.15
 # Floor temperature
 Tf = 290.0
 
-# Demand power for heating from Domus - air conditionning system
+# Demand power for heating from Domus - air conditionning system 
+# Including the power at gradient 'gradient        uniform <value>;'
 rejectedHeat = 122.0 # [W/m2]
 
 # Sensors - distance from the wall

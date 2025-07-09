@@ -3,19 +3,19 @@
 # Source OpenFOAM v12 (Foundation)
 . /opt/openfoam12/etc/bashrc
 
-#set -e  # Stop script immediately if any command fails
-
 cd ${0%/*} || exit 1
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
 foamCleanTutorials
 
 rm -rf 0/*
+rm -rf system/controlDict
 
 echo " Step 1: Running Python preprocessors for blockMeshDict and snappyHexMeshDict..."
 python3 blockMesh.py
 python3 surfaceFeatures.py
 python3 snappyHexMesh.py
+python3 controlDict.py 
 
 echo " Step 2: Running blockMesh..."
 runApplication blockMesh
@@ -37,9 +37,6 @@ rm log.reconstructPar
 rm -rf processor*
 
 echo " Step 8: Running Python scripts for patch fixing and BC setup..."
-
-python3 controlDict.py 
-
 python3 functions.py
 
 ./bc
@@ -60,8 +57,6 @@ runParallel $(getApplication)
 
 echo " Step 11: Reconstructing final results..."
 runApplication reconstructPar
-
-touch result.foam
 
 echo " All steps completed successfully. Simulation finished!"
 

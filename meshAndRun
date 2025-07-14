@@ -12,6 +12,7 @@ rm -rf 0/*
 rm -rf system/controlDict
 
 echo " Step 1: Running Python preprocessors for blockMeshDict and snappyHexMeshDict..."
+python3 simu.py
 python3 blockMesh.py
 python3 surfaceFeatures.py
 python3 snappyHexMesh.py

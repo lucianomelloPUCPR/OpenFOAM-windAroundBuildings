@@ -1,5 +1,5 @@
 input_file = 'postProcessing/htc_surfaces/0/wallHeatTransferCoeff.dat'
-output_file = 'postProcessing/htc_surfaces/0/wallHeatTransferCoeff.dat'
+output_file = 'postProcessing/htc_surfaces/0/wallHeatTransferCoeff_rounded.dat'
 
 with open(input_file, 'r') as f_in, open(output_file, 'w') as f_out:
     for line in f_in:

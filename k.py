@@ -24,7 +24,7 @@ for stl_file in stl_files:
         f'    {base_name}\n'
         f'    {{\n'
         f'        type            kqRWallFunction;\n'
-        f'        value           uniform {k_value:.2g};\n'
+        f'        value           uniform 0.1;\n'
         f'    }}\n\n'
     )
 
@@ -46,7 +46,7 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform {k_value:.2g};
+internalField   uniform 0.1;
 
 boundaryField
 {{
@@ -67,7 +67,7 @@ boundaryField
     floor
     {{
         type            kqRWallFunction;
-        value           uniform {k_value:.2g};
+        value           uniform 0.1;
     }}
 
 {refinement_surfaces_block}    #includeEtc "caseDicts/setConstraintTypes"

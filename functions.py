@@ -123,7 +123,6 @@ functions_content += f'''
     {{
         type        wallHeatTransferCoeff;
         libs        ("libfieldFunctionObjects.so");
-        enabled     true;
         model       kappaEff;
         patches     (
 {os.linesep.join(surface_names)}
@@ -131,7 +130,8 @@ functions_content += f'''
         rho         1.225;
         Cp          1005;
         Pr          0.707;
-        Prt         0.09;  // <-- Reduced from 0.9 to 0.09 to multiply h by 10
+        Prt         0.9;  // <-- Reduced from 0.9 to 0.09 to multiply h by 10
+        Lchar       0.1;
         writeControl timeStep;
         writeInterval   {interval};
     }}
